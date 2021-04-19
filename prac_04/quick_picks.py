@@ -7,6 +7,7 @@ def print_line():
         random_number = random.randint(1, 45)
         if random_number not in line:
             line.append(random_number)
+    line = sorted(line)
     for each in line:
         print("{:>2d}".format(each), end=" ")
 
