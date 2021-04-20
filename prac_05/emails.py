@@ -2,7 +2,7 @@ NAME_DICT = {}
 email = input("Email:").split("@")
 while email != [""]:
     name_unconfirmed = ' '.join((str(email[0]).title()).split("."))
-    confirm = str(input(f"Is your name {name_unconfirmed}? (Y/n)")).lower()
+    confirm = input(f"Is your name {name_unconfirmed}? (Y/n)")
     if confirm == "no" or confirm == "n":
         confirmed_name = input("Name:")
         NAME_DICT[confirmed_name] = ''.join(email)
