@@ -6,5 +6,5 @@ for each in text:
     else:
         dictionary[each] += 1
 length = max(len(x) for x in dictionary)
-for key, value in sorted(dictionary.items()):
+for key, value in dictionary.items():
     print(f"{key:<{length}} : {value}")
