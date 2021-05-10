@@ -1,0 +1,12 @@
+from prac_08.silver_service_taxi import SilverServiceTaxi
+silver_taxi_1 = SilverServiceTaxi("Hummer", 200, 2)
+silver_taxi_1.drive(18)
+print(silver_taxi_1.__str__())
+print(silver_taxi_1.get_fare())
+print(silver_taxi_1.price_per_km, silver_taxi_1.flagfall, silver_taxi_1.current_fare_distance)
+silver_taxi_1.drive(290)
+print(silver_taxi_1.__str__())
+print(silver_taxi_1.get_fare())
+silver_taxi_1.drive(290)
+print(silver_taxi_1.__str__())
+print(silver_taxi_1.get_fare())
