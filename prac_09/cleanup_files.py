@@ -27,7 +27,7 @@ def main():
 
 
 def get_fixed_filename(filename):
-    pos = [i for i, e in enumerate(filename) if e.isupper()]
+    pos = [i for i, e in enumerate(filename) if e.isupper() and filename[i-1].islower()]
     parts = []
     for j in range(len(pos)):
         try:
@@ -35,8 +35,11 @@ def get_fixed_filename(filename):
         except IndexError:
             parts.append(filename[pos[j]:])
     filename = " ".join(parts)
-    filename = filename.replace(" ", "_").replace(".TXT", ".txt")
-    new_name = filename.title()
+    filename = filename.title()
+    filename = filename.split(".")
+    filename[1] = filename[1].lower()
+    new_name = ".".join(filename)
+    new_name.replace(" ", "_")
     return new_name
 
 
@@ -53,3 +56,4 @@ def demo_walk():
             os.rename(os.path.join(directory_name, filename), os.path.join(directory_name, new_name))
 
 
+print(get_fixed_filename("ItIsWell (oh my soul).txt"))
