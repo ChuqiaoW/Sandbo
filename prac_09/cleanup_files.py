@@ -56,4 +56,5 @@ def demo_walk():
             os.rename(os.path.join(directory_name, filename), os.path.join(directory_name, new_name))
 
 
+main()
 print(get_fixed_filename("ItIsWell (oh my soul).txt"))
